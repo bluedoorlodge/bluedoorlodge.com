@@ -1,0 +1,881 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-color: #111;
+  color: #D0D0D0;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #B0B0B0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  color: #B0B0B0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c9bdc1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c2b4b9;
+}
+
+/* Hero Section Styling */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+  background: #0b0b0b;
+  color: #f0e4ea;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Playfair Display', serif; /* New font for Hero */
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(95%) contrast(105%);
+  transition: transform 1.5s ease;
+}
+
+.hero-image .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.6), rgba(0,0,0,0.9));
+  z-index: 1;
+}
+
+.hero-text {
+  z-index: 2;
+  position: relative;
+  padding: 30px 0;
+}
+
+.hero h1 {
+  font-size: 3.2em;
+  color: #9e8f98;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  color: #a190a2;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #b5a8ae;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 150, 203, 0.3);
+}
+
+.cta-button:hover {
+  background: #ad9ca4;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(194, 171, 182, 0.5);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,150,203, 0.4); }
+  70% { box-shadow: 0 0 0 14px rgba(255,150,203, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,150,203, 0); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Intro Section Styling */
+.intro {
+  max-width: 960px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 0, 128, 0.05);
+  transition: all 0.4s ease-in-out;
+  font-family: 'Poppins', sans-serif; /* Font for Intro section */
+}
+
+.intro h2 {
+  font-size: 2.8em;
+  text-align: center;
+  color: #f6c1e2;
+  margin-bottom: 20px;
+}
+
+.intro h3 {
+  font-size: 1.4em;
+  color: #d09dc3;
+  margin-top: 40px;
+}
+
+.intro p, .intro li {
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.intro ol, .intro ul {
+  padding-left: 25px;
+}
+
+.intro strong {
+  color: #81727a;
+}
+
+.intro ul li::before {
+  content: "✦ ";
+  color: #6e5f66;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-btn {
+  display: block;
+  margin: 40px auto 20px;
+  background: #6c5c64;
+  color: #1a1a1a;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reveal-btn:hover {
+  background: #c1a2b1;
+}
+
+/* Testimonials Section Styling */
+.testimonials {
+  padding: 1.5rem 2rem; /* Reduced the padding further */
+  text-align: center;
+  color: #ccc;
+}
+
+.testimonials h2 {
+  color: #b38f9b;
+  margin-bottom: 0.8rem; /* Reduced margin between heading and testimonials */
+  font-size: 1.7rem; /* Slightly smaller font size */
+}
+
+/* Styling for the container of testimonials */
+.testimonial-container {
+  position: relative;
+  overflow: hidden;
+  height: 160px; /* Further reduced the height of the container */
+}
+
+.testimonial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Hidden by default */
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.testimonial h3 {
+  font-size: 1.1rem; /* Kept the same, can be reduced more if needed */
+  color: #847077;
+  margin-bottom: 0.2rem; /* Even more compact spacing */
+}
+
+.testimonial p {
+  font-size: 0.8rem; /* Slightly smaller font size for the testimonial text */
+  color: #ddd;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  font-size: 0.85rem; /* Smaller font size for the blockquote */
+  color: #aaa;
+  margin: 0.8rem 0; /* Reduced margin between the blockquote */
+  border-left: 5px solid #403a3c;
+  padding-left: 12px; /* Reduced padding on the left */
+}
+
+
+
+/* JavaScript will add the class "active" to display the testimonial */
+.testimonial.active {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0b0b0b;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+header {
+  background: #111;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  position: relative; /* Remove fixed positioning */
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  color: #5b4954;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1.2rem;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #58464f;
+}
+
+/* Main Section - Booking Section */
+.booking {
+  padding: 5rem 2rem 2rem 2rem;
+  text-align: center;
+  color: #f0e4ea;
+  min-height: 100vh;
+  background: url('images/booking-background.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+.booking-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 150, 203, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.booking-container:hover {
+  transform: translateY(-5px);
+}
+
+.booking h2 {
+  font-size: 1.1rem;
+  color: #55454b;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  animation: fadeIn 2s ease-out;
+}
+
+.booking p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  animation: fadeIn 2s ease-out;
+}
+
+.booking strong {
+  color: #584d53;
+}
+
+.cta-email {
+  color: #555153;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.cta-email:hover {
+  color: #655359;
+}
+
+.animated-text {
+  animation: fadeIn 2s ease-out;
+}
+
+/* Footer Styling */
+footer {
+  background: #111;
+  color: #ddd;
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .booking h2 {
+    font-size: 2rem;
+  }
+
+  .booking p {
+    font-size: 1rem;
+  }
+
+  .cta-email {
+    font-size: 1rem;
+  }
+
+  .booking-container {
+    padding: 2rem;
+  }
+}
+/* style.css */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #444;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #948887;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #78625f;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+}
+
+.rooms h2 {
+  font-size: 2rem;
+  color: #a78f8d;
+  margin-bottom: 0.5rem;
+}
+
+.rooms p {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+/* Room Cards */
+.room-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.room-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.room-image {
+  width: 100%;
+  height: 250px; /* Adjust the height you want */
+  overflow: hidden;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.room-description h3 {
+  color: #998f7f;
+  margin-bottom: 0.5rem;
+}
+
+.room-description p {
+  color: #ddd;
+}
+
+.room-essay {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 2px solid #444;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #c0392b;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab&display=swap');
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light gray text for contrast */
+}
+
+header {
+  background-color: #1e1e1e; /* Darker background for header */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 2px;
+  color: #918d7e; /* Gold color for logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #45443f; /* Gold underline effect */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links li a:hover {
+  color: #727169; /* Hover color change to gold */
+}
+
+.nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+.booking {
+  text-align: center;
+  background-color: #1c1c1c; /* Dark background for booking section */
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Strong shadow for depth */
+  border-radius: 12px; /* Rounded corners */
+}
+
+.booking-container h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  color: #a09d93; /* Gold text for emphasis */
+  margin-bottom: 20px;
+}
+
+.booking-container p {
+  font-size: 1.0rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+}
+
+.cta-email {
+  color: #aeaca5; /* Gold for call-to-action */
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cta-email:hover {
+  color: #ffffff; /* White text on hover */
+  text-decoration: underline;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: #1e1e1e; /* Dark background for pricing section */
+  padding: 60px 20px;
+}
+
+.pricing-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.pricing-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.3rem;
+  color: #c0bcc2; /* Gold title */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pricing-card {
+  background-color: #2c2c2c; /* Darker background for pricing card */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Darker shadow for emphasis */
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.pricing-list li {
+  padding: 12px 0;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.pricing-note {
+  font-style: italic;
+  margin-top: 20px;
+  color: #bbb;
+}
+
+/* Hover Effects for Pricing */
+.pricing-card:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .booking-container {
+    padding: 20px;
+  }
+
+  .pricing-container {
+    padding: 20px;
+  }
+
+  .pricing-card {
+    padding: 30px;
+  }
+}
+/* General styles */
+body {
+  font-family: Georgia, serif; /* Set to Georgia font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.navbar {
+  background-color: #111;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Equipment section */
+.equipment {
+  padding: 2rem;
+}
+
+.equipment-display {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  min-height: 1400px; /* Ensures enough space for tall list and stacked images */
+}
+
+.item-list {
+  flex: 1;
+  background-color: #373232; /* Set background for the entire list */
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.item-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-list li {
+  cursor: pointer;
+  padding: 2px 5px;
+  margin-bottom: 3px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.item-list li:hover {
+  background-color: #272323;
+}
+
+/* Image display (7 stacked images) */
+.image-preview {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.image-preview img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #3b3434;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #363333;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

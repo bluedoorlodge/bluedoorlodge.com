@@ -152,32 +152,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Intro Section Styling */
 .intro {
   max-width: 960px;
-  margin: 80px auto;
-  padding: 30px;
-  background: rgba(20, 20, 20, 0.9);
-  border: 1px solid #333;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(255, 0, 128, 0.05);
-  transition: all 0.4s ease-in-out;
+  margin: 0 auto;
   font-family: 'Poppins', sans-serif;
 }
 
 .intro h2 {
   font-size: 2.8em;
   text-align: center;
-  color: #f6c1e2;
+  color: inherit;
   margin-bottom: 20px;
 }
 
 .intro h3 {
   font-size: 1.4em;
-  color: #d09dc3;
+  color: inherit;
   margin-top: 40px;
 }
 
 .intro p, .intro li {
   font-size: 0.9em;
-  color: #ddd;
+  color: inherit;
 }
 
 .intro ol, .intro ul {
@@ -185,12 +179,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro strong {
-  color: #81727a;
+  color: inherit;
 }
 
 .intro ul li::before {
-  content: "✦ ";
-  color: #6e5f66;
+  content: none;
 }
 
 .fade {

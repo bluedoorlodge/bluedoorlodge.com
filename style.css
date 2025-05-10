@@ -15,16 +15,11 @@ a {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cinzel', serif;
-  color: #B0B0B0;
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem; /* Reduced padding for a smaller navbar */
 }
 
 .navbar .logo {
@@ -32,25 +27,26 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.5rem;
   color: #c9bdc1;
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Smaller font size for the logo */
   font-weight: bold;
 }
 
 .logo-img {
-  width: 70px;
-  height: 70px;
+  width: 50px; /* Reduced logo size */
+  height: 50px;
   object-fit: contain;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem; /* Reduced gap between nav items */
 }
 
 .nav-links a {
   color: #eee;
   text-decoration: none;
+  font-size: 1rem; /* Smaller font size for links */
   transition: color 0.3s;
 }
 
@@ -58,6 +54,35 @@ h1, h2, h3, h4, h5, h6 {
   color: #c2b4b9;
 }
 
+/* Reduce heading size to match the reduced navbar and text size */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  color: #B0B0B0;
+}
+
+h1 {
+  font-size: 1.75rem; /* Adjusted heading size */
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
 /* Hero Section Styling */
 .hero {
   display: flex;

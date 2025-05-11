@@ -185,6 +185,27 @@ h6 {
     font-size: 0.5rem; /* Very small font size for h6 */
   }
 }
+/* Default container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem; /* spacing around content */
+}
+
+/* Responsive container adjustments */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;   /* smaller width for tablets and phones */
+    padding: 1rem;    /* reduce inner spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 95%;   /* almost full width on small phones */
+    padding: 0.75rem; /* even less padding */
+  }
+}
 
 /* Hero Section Styling */
 .hero {

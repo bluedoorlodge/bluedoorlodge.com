@@ -20,7 +20,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem; /* Reduced padding for a smaller navbar */
+  padding: 0.3rem 0.7rem; /* Reduced padding for a smaller navbar */
 }
 
 .navbar .logo {
@@ -85,128 +85,14 @@ h6 {
   font-size: 0.75rem;
 }
 
-/* Mobile Adjustments (for screens smaller than 768px) */
-@media (max-width: 480px) {
-  /* Navbar adjustments for mobile */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem; /* More compact navbar */
-  }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.75rem; /* Smaller gap between links */
-    align-items: flex-start;
-  }
-
-  .nav-links a {
-    font-size: 0.875rem; /* Smaller font size for links */
-  }
-
-  /* Logo adjustments for mobile */
-  .logo {
-    font-size: 1.125rem; /* Slightly smaller logo font size */
-  }
-
-  .logo-img {
-    width: 40px; /* Slightly smaller logo image */
-    height: 40px;
-  }
-
-  /* Heading adjustments for mobile */
-  h1 {
-    font-size: 1.5rem; /* Smaller font size for mobile */
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  h3 {
-    font-size: 1.125rem;
-  }
-
-  h4 {
-    font-size: 0.875rem;
-  }
-
-  h5 {
-    font-size: 0.75rem;
-  }
-
-  h6 {
-    font-size: 0.625rem; /* Even smaller font size for h6 */
-  }
-}
-
-/* Extra small mobile adjustments (for screens smaller than 480px) */
-@media (max-width: 480px) {
-  /* Navbar adjustments for small screens */
-  .navbar {
-    padding: 0.25rem; /* Even smaller padding */
-  }
-
-  .nav-links a {
-    font-size: 0.75rem; /* Even smaller font size for links */
-  }
-
-  /* Further logo size adjustments */
-  .logo {
-    font-size: 1rem; /* Even smaller logo font size */
-  }
-
-  .logo-img {
-    width: 30px; /* Smaller logo image for very small screens */
-    height: 30px;
-  }
-
-  /* Further heading size reductions */
-  h1 {
-    font-size: 1.25rem; /* Smaller font size for h1 */
-  }
-
-  h2 {
-    font-size: 1.125rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  h4 {
-    font-size: 0.75rem;
-  }
-
-  h5 {
-    font-size: 0.625rem;
-  }
-
-  h6 {
-    font-size: 0.5rem; /* Very small font size for h6 */
-  }
-}
 /* Default container styling */
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 2rem; /* spacing around content */
+  padding: 1.5rem; /* spacing around content */
 }
 
-/* Responsive container adjustments */
-@media (max-width: 480px) {
-  .container {
-    max-width: 90%;   /* smaller width for tablets and phones */
-    padding: 1rem;    /* reduce inner spacing */
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    max-width: 95%;   /* almost full width on small phones */
-    padding: 0.75rem; /* even less padding */
-  }
-}
 
 /* Hero Section Styling */
 .hero {
@@ -374,7 +260,7 @@ h6 {
 
 /* Testimonials Section Styling */
 .testimonials {
-  padding: 1.5rem 2rem;
+  padding: 1.0rem 1.7rem;
   text-align: center;
   color: #ccc;
 }
@@ -435,85 +321,11 @@ h6 {
   100% { opacity: 1; }
 }
 
-/* Mobile Styling */
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-
-  .nav-links a {
-    font-size: 1.1rem;
-    color: #ddd;
-  }
-
-  .hero h1 {
-    font-size: 2.5em;
-  }
-
-  .hero p {
-    font-size: 1.2em;
-  }
-
-  .cta-button {
-    padding: 12px 28px;
-    font-size: 1.1em;
-  }
-
-  .intro {
-    margin: 40px 20px;
-    padding: 20px;
-  }
-
-  .intro h2 {
-    font-size: 2.2em;
-  }
-
-  .booking h2 {
-    font-size: 1.6em;
-  }
-
-  .testimonials {
-    padding: 1rem;
-  }
-
-  .testimonial-container {
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2.1em;
-  }
-
-  .hero p {
-  font-size: 1em;
-  }
-  
-  .cta-button {
-  font-size: 0.95em;
-  padding: 10px 24px;
-  }
-  
-  .intro h2 {
-  font-size: 1.6em;
-  }
-  
-  .testimonials h2 {
-  font-size: 1.4em;
-  }
-  }/* Main Content */
+/* Main Content */
 main {
-  padding: 2rem;
+  padding: 1.7rem;
 }
+
 
 .rooms h2 {
   font-size: 2rem;
@@ -568,6 +380,7 @@ main {
   color: #444;
 }
 
+
 /* Footer */
 footer {
   background-color: #1e1e1e;
@@ -588,7 +401,7 @@ footer a:hover {
 /* Highlight the booking section */
 .booking {
   background-color: #362a66; /* Light lavender for subtle contrast */
-  padding: 3rem 2rem;
+  padding: 2.5rem 1.7rem;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   margin: 3rem 0;
@@ -647,4 +460,127 @@ footer a:hover {
 .cta-email:hover {
   background-color: #000000;
   box-shadow: 0 4px 12px rgba(19, 5, 40, 0.4);
+} 
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    .nav-links {
+      flex-direction: row;
+      flex-wrap: wrap; /* allow wrapping if needed */
+      justify-content: center;
+    }
+    
+    align-items: flex-start;
+    padding: 0.25rem;
+    overflow-x: auto; /* optional: helps prevent horizontal overflow */
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+    color: #ddd;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.75rem;
+  }
+
+  h5 {
+    font-size: 0.625rem;
+  }
+
+  h6 {
+    font-size: 0.5rem;
+  }
+
+  /* Container */
+  .container {
+    max-width: 95%;
+    padding: 0.75rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.1em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    font-size: 0.95em;
+    padding: 10px 24px;
+  }
+
+  /* Intro Section */
+  .intro {
+    margin: 40px 20px;
+    padding: 0.7rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6em;
+  }
+
+  /* Booking Section */
+  .booking h2 {
+    font-size: 1.6em;
+  }
+
+  /* Testimonials Section */
+  .testimonials {
+    padding: 1rem;
+  }
+
+  .testimonials h2 {
+    font-size: 1.4em;
+  }
+
+  .testimonial-container {
+    height: auto;
+  }
+
+  /* Main & Rooms */
+  main {
+    padding: 1rem;
+  }
+
+  .room-image {
+    height: 180px;
+  }
 }

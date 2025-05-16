@@ -188,36 +188,47 @@ h6 {
 /* Intro Section Styling */
 .intro {
   max-width: 960px;
-  margin: 80px auto;
-  padding: 30px;
-  background: rgba(20, 20, 20, 0.9);
-  border: 1px solid #333;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(255, 0, 128, 0.05);
   transition: all 0.4s ease-in-out;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Arial', sans-serif;  
+  line-height: 1.5;
+  margin: 40px 20px;
+  padding: 0rem;
 }
 
 .intro h2 {
-  font-size: 2.8em;
+  font-size: 1.5rem;
   text-align: center;
-  color: #f6c1e2;
-  margin-bottom: 20px;
+  color: #8f8787;
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 .intro h3 {
-  font-size: 1.4em;
-  color: #d09dc3;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  color: #a59c9c;
   margin-top: 40px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+em {
+  font-style: italic;
+  color: #333;
 }
 
 .intro p, .intro li {
-  font-size: 0.9em;
-  color: #ddd;
-}
+  font-size: 0.9rem; /* slightly smaller text */
+  margin-bottom: 1rem;
+  color: #555;
+  }
 
 .intro ol, .intro ul {
-  padding-left: 25px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-position: outside;
 }
 
 .intro strong {
@@ -547,16 +558,6 @@ footer a:hover {
     padding: 10px 24px;
   }
 
-  /* Intro Section */
-  .intro {
-    margin: 40px 20px;
-    padding: 0.7rem;
-  }
-
-  .intro h2 {
-    font-size: 1.6em;
-  }
-
   /* Booking Section */
   .booking h2 {
     font-size: 1.6em;
@@ -583,4 +584,24 @@ footer a:hover {
   .room-image {
     height: 180px;
   }
+}
+#philosophySection {
+  padding: 0 !important;
+}
+
+#philosophySection h2,
+#philosophySection h3,
+#philosophySection p,
+#philosophySection ul,
+#philosophySection ol {
+  margin: 0;
+}
+.philosophy-image {
+  border: 5px solid #444; /* Adds a solid border around the image */
+  border-radius: 15px; /* Optional: rounds the corners for a more elegant look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the image */
+  max-width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  display: block; /* Ensures image is block level (removes spacing issues) */
+  margin: 20px 0; /* Adds space above and below the image */
 }

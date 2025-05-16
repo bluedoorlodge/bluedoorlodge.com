@@ -221,7 +221,7 @@ em {
 .intro p, .intro li {
   font-size: 0.9rem; /* slightly smaller text */
   margin-bottom: 1rem;
- color: #ffffff;
+  color: #ffffff;
   }
 
 .intro ol, .intro ul {
